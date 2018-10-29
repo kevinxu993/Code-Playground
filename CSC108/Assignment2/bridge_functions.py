@@ -511,3 +511,18 @@ def add_rehab(bridge_data: List[list], bridge_id: int, new_date: str,
         result[LAST_MAJOR_INDEX] = new_date
     else:
         result[LAST_MINOR_INDEX] = new_date
+
+
+if __name__ == '__main__':
+    # To test your code with larger lists, you can uncomment the code below to
+    # read data from the provided CSV file.
+    bridges = read_data(open('bridge_data_small.csv'))
+    format_data(bridges)
+
+    # For example,
+    print(get_bridge(bridges, 3))
+    expected = [3, 'NORTH PARK STEET UNDERPASS', '403', 43.165918, -80.263791,
+                '1962', '2013', '2009', 4, [12.2, 18.0, 18.0, 12.2], 60.8,
+                '04/13/2012', [71.4, 69.9, 67.7, 68.9, 69.1, 69.9, 72.8]]
+    print('Testing get_bridge: ', \
+         get_bridge(bridges, 3) == expected)
