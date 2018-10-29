@@ -1,2 +1,2 @@
 # Code-Playground
-Something I feel interested in, so I coded.
+Something I felt interested in, so I coded.
